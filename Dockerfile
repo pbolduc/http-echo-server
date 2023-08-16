@@ -18,6 +18,7 @@ RUN chown -R 1001:0 /tmp/src
 
 USER 1001
 RUN npm install
+RUN chown -R 1001:0 /tmp/src
 
 #
 # Create the final container image
