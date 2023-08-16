@@ -27,7 +27,7 @@ FROM registry.access.redhat.com/ubi9/nodejs-18-minimal:1-63
 ENV PORT=3000 \
     NO_UPDATE_NOTIFIER=true
 
-COPY --from=builder /tmp/src ${HOME}
+COPY --from=builder /tmp/src ${HOME}/app
 WORKDIR ${HOME}/app
 
 EXPOSE ${PORT}
